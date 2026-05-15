@@ -4,6 +4,7 @@ using namespace std;
 int arr[10] = {0};
 int first = -1;
 int last = -1;
+int queuesize = 0;
 int top(){
     if(first == -1){
         cout<<"No element in queue"<<endl;
@@ -12,29 +13,32 @@ int top(){
     return arr[first];
 }
 void push(int num){
-    if(last==9){
+    if(queuesize==10){
         cout<<"queue overflow!!"<<endl;
         return ;
     }
+    queuesize++;
     if(first==-1)
         first = 0;
-    last++;
+    last = (last+1)%10;
     arr[last] = num;
 }
 int pop(){
-    if(first == -1){
+    if(queuesize == 0){
         cout<<"queue underflow!!\n";
         return -1;
     }
-    int temp = arr[first++];
-    if(first>last){
+    queuesize--;
+    int temp = arr[first];
+    first = (first+1)%10;
+    if(queuesize==0){
         first = -1;
         last = -1;
     }
     return temp;
 }
-void size(){
-    cout<<last-first+1<<endl;
+void Size(){
+    cout<<queuesize<<endl;
 }
 int main() {
     push(2);
@@ -42,6 +46,6 @@ int main() {
     pop();
     cout<<top()<<endl;
     cout<<top()<<endl;
-    size();
+    Size();
     return 0;
 }
