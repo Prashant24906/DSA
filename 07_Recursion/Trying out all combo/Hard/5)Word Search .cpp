@@ -8,7 +8,6 @@ public:
             bool ans = helper(s,wordDict,index+wordDict[i].size());
             if(ans==true) return true;
             }
-
         }
         return false;
     }
