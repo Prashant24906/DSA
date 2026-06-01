@@ -12,7 +12,6 @@ public:
     }
     int myAtoi(string s,int i = 0) {
             while (i < s.size() && s[i] == ' ') i++;
-
     int sign = 1;
     if (i < s.size() && (s[i] == '+' || s[i] == '-')) {
         sign = (s[i] == '-') ? -1 : 1;
