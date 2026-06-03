@@ -5,9 +5,8 @@ public:
             ans.emplace_back(s);
             return ;
         }
-         if(open>0){
+         if(open>0)
             helper(n,s+"(",ans,open-1,close);
-        }
         if(close>open){
              helper(n,s+")",ans,open,close-1);
         }
