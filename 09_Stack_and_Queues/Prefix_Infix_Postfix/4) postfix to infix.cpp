@@ -1,5 +1,3 @@
-// User function Template for C++
-
 class Solution {
   public:
     string postToInfix(string &pre_exp) {
