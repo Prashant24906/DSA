@@ -18,8 +18,9 @@ public:
             while(!st.empty()&&arr[st.top()]>arr[i]) st.pop();
             if(!st.empty())
                 PrevSmaller[i] = st.top();
-            else  
+            else {
                 PrevSmaller[i] = -1;
+            }
             st.push(i);
         }
         return PrevSmaller;
