@@ -35,7 +35,7 @@ public:
         }
         while (list2 != nullptr) {
             ListNode* temp = new ListNode(list2->val);
-            mover->next = temp;
+            mover -> next = temp;
             mover = mover->next;
             list2 = list2->next;
         }
