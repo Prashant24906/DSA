@@ -1,0 +1,31 @@
+class SpecialStack {
+  public:
+    stack<pair<int,int>> st;
+    SpecialStack() {
+        // Define Stack
+    }
+
+    bool isEmpty() {
+        return st.empty();
+    }
+
+
+    void push(int val) {
+        if(st.empty()) st.push({val,val});
+        else st.push({val,min(val,st.top().second)});
+    }
+    
+    void pop() {
+        st.pop();
+    }
+    
+    int peek() {
+        if(isEmpty()) return -1;
+        return st.top().first;
+    }
+    
+    int getMin() {
+        if(isEmpty()) return -1;
+        return st.top().second;
+    }
+};
