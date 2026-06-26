@@ -16,7 +16,7 @@ public:
                 }
                 l++;
             }
-            maxi+=(r-l+1);
+            maxi += (r-l+1);
         }
         return maxi;
     }
