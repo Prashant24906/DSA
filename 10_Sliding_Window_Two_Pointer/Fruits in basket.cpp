@@ -9,9 +9,8 @@ public:
             mp[fruits[r]]++;
             while(mp.size()>2){
                 mp[fruits[l]]--;
-                if(mp[fruits[l]]==0){
+                if(mp[fruits[l]]==0)
                     mp.erase(fruits[l]);
-                }
                 l++;
             }
             maxi = max(maxi,r-l+1);
