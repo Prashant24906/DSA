@@ -17,7 +17,6 @@ Explanation: The input represents a min-heap.
 Input : [2, 10, 4, 5, 3, 15]
 Output: false
 Explanation: The input is not a min-heap, as it violate the heap property.
-
 		   2
 		 /   \
 		/	  \
