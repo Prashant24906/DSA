@@ -1,7 +1,5 @@
 /*
-
 Given an integer array, check if it represents min-heap or not.
-
 Input : [2, 3, 4, 5, 10, 15]
 Output: true
 Explanation: The input represents a min-heap.
