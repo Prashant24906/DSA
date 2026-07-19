@@ -10,7 +10,7 @@ class Solution {
 		else
 			return - 1;
 	}
-	
+
 	// function to check if operator is right-associative
 	bool isRightAssociative(char c) {
 		return c == '^';
