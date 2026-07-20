@@ -5,9 +5,8 @@ void minheap(vector<int>& heap,int i){
     int left = 2 * i ;
     int right = 2 * i + 1;
     int smaller = i;
-    if(left<n && heap[i]>heap[left]){
+    if(left<n && heap[i]>heap[left])
       smaller = left;
-    }
     if(right<n&&heap[smaller]>heap[right]){
       smaller = right;
     }
