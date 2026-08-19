@@ -20,8 +20,7 @@ public:
         while(!st1.empty()){
             TreeNode* temp = st1.top();
             st1.pop();
-            if(temp->left)
-                st1.push(temp->left);
+            if(temp->left) st1.push(temp->left);
             if(temp->right)
                 st1.push(temp->right);
             st2.push(temp);
