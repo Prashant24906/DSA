@@ -52,6 +52,5 @@ class Solution {
     }
     int minTime(Node* root, int target) {
         return TimeToBurn(root,target)-1;
-        
     }
 };
